@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  bitcoin_db:
+    container_name: bitcoin_db
+    image: "postgres:12"
+    shm_size: "3gb"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=bitcoin
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=bitcoin_database
+    volumes:
+      - bitcoin_data:/var/lib/postgresql/data
+volumes:
+  bitcoin_data: {}

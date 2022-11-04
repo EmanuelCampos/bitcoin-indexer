@@ -1,0 +1,34 @@
+{
+  "name": "bitcoin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:BitcoinMovementInterviews/Emanuel-Ferreira.git",
+  "author": "Emanuel Ferreira <contatoferreirads@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^3.2.4",
+    "bitcoin-core": "^4.1.0",
+    "bitcoind-rpc": "^0.9.1",
+    "bitcoinjs-lib": "^6.0.2",
+    "dotenv": "^16.0.3",
+    "koa": "^2.13.4",
+    "koa-cors": "^0.0.16",
+    "koa-router": "^12.0.0",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.25.3",
+    "zeromq": "^5.2.8"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/babel-node ./dist/index.js",
+    "dev": "nodemon --exec node_modules/.bin/babel-node ./src/index.js",
+    "build": "./node_modules/.bin/babel src --out-dir dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.6",
+    "@babel/node": "^7.19.1",
+    "@babel/preset-env": "^7.19.4",
+    "nodemon": "^2.0.20"
+  }
+}
